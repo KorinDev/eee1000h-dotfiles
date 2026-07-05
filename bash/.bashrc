@@ -48,7 +48,7 @@ eval "$(zoxide init bash)"
 
 
 echo "Welcome to"
-figlet Alpine Linux | lolcat -x
+figlet -f lean Alpine Linux | lolcat -x
 echo
 echo
 fortune
