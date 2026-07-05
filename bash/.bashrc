@@ -4,6 +4,7 @@ alias .='cd ..'
 alias cp='cp -v'
 alias rm='rm -i'
 alias vi='vim'
+alias v='vim'
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
@@ -40,7 +41,6 @@ export PS1='\[\033[1;37m\]$PWD -% \[\033[0m\]'
 
 # ------------------------------- Evals
 
-eval "$(zoxide init bash)"
 eval "$(starship init bash)"
 
 # ------------------------------- Start
