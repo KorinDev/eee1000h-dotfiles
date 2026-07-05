@@ -49,7 +49,7 @@ eval "$(starship init bash)"
 
 
 echo "Welcome to"
-figlet -f lean Alpine Linux | lolcat -x
+figlet -f lean Alpine | boxes | lolcat -x
 echo
 echo
 fortune
