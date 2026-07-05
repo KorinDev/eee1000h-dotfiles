@@ -41,6 +41,7 @@ export PS1='\[\033[1;37m\]$PWD -% \[\033[0m\]'
 # ------------------------------- Evals
 
 eval "$(zoxide init bash)"
+eval "$(starship init bash)"
 
 # ------------------------------- Start
 
