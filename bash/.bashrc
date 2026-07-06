@@ -7,7 +7,6 @@ alias vi='vim'
 alias v='vim'
 alias c='clear'
 
-alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias ip='ip --color=auto'
 
@@ -38,7 +37,8 @@ PATH=$PATH:~/.local/bin
 
 # ------------------------------- Prompt
 
-export PS1='\[\033[1;37m\]$PWD -% \[\033[0m\]'
+# deprecated due to starship
+# export PS1='\[\033[1;37m\]$PWD -% \[\033[0m\]'
 
 # ------------------------------- Evals
 
