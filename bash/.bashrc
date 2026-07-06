@@ -24,7 +24,7 @@ alias cat='bat'
 
 alias sl='sl | lolcat -x'
 
-alias calc='bc'
+alias calc='bc -q'
 
 # ------------------------------- Exports
 
@@ -34,6 +34,7 @@ export EDITOR=$VISUAL
 # ------------------------------- Path
 
 PATH=$PATH:~/.local/bin
+PATH=$PATH:~/.cargo/bin
 
 # ------------------------------- Prompt
 
