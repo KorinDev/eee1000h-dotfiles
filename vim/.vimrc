@@ -4,6 +4,8 @@ set t_co=256
 
 set number
 
+set termguicolors
+
 "---------------------------------------- Tabs"
 filetype plugin indent on
 set expandtab
