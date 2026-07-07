@@ -1,4 +1,4 @@
-"----------------------------------------- General"
+"----------------------------------------- General
 syntax enable
 set t_co=256
 
@@ -6,7 +6,10 @@ set number
 
 set termguicolors
 
-"---------------------------------------- Tabs"
+set ttyfast
+set lazyredraw
+
+"---------------------------------------- Tabs
 filetype plugin indent on
 set expandtab
 set shiftwidth=4
@@ -20,11 +23,15 @@ set sidescrolloff=5
 set nocompatible
 set backspace=2
 
-"---------------------------------------- Visual"
+"---------------------------------------- Visual
 set showmode
 set laststatus=2
 set showcmd
 set modeline
 set ruler
 set title
+
+"---------------------------------------- Binds
+inoremap <C-h> <C-w>
+noremap <F1> i
 

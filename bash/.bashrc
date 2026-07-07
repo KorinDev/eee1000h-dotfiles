@@ -1,3 +1,10 @@
+# -------------------------------
+#                               #
+# Korin's Amazing BASHRC        #
+#                               #
+# -------------------------------
+
+
 # ------------------------------- Aliases
 
 alias .='cd ..'
@@ -30,6 +37,7 @@ alias calc='bc -q'
 
 export VISUAL=vim
 export EDITOR=$VISUAL
+export TERM=linux
 
 # ------------------------------- Path
 
@@ -69,8 +77,14 @@ extract () {
     fi
 }
 
+# ------------------------------- Binds
+
+bind '"\C-h": backward-kill-word'
+
+
 # ------------------------------- Start
 
+## Autostart TMUX
 [ -z "$TMUX" ] && exec tmux
 
 
