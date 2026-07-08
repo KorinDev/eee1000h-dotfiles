@@ -24,14 +24,17 @@ alias l='ls -F'
 alias dosbox='~/.local/bin/dosbox'
 alias word='wordgrinder'
 
-alias ls='exa --icons --git'
-alias tree='exa --icons --git --tree'
+alias ls='eza --icons --git'
+alias tree='eza --icons --git --tree'
 
 alias cat='bat'
 
 alias sl='sl | lolcat -x'
 
 alias calc='bc -q'
+
+# PIPE COPY FOR... well you know. piping.
+alias pcopy='tmux load-buffer -'
 
 # ------------------------------- Exports
 
