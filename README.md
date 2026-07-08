@@ -1,3 +1,4 @@
+<pre>
  ____        _    __ _ _           
  |  _ \  ___ | |_ / _(_) | ___  ___ 
  | | | |/ _ \| __| |_| | |/ _ \/ __|
@@ -35,3 +36,4 @@ You are actively reading my `README.md` file of ULTIMATE COOLNESS.
 - figlet
 - boxes
 :wq
+</pre>
