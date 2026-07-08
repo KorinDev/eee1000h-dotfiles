@@ -88,10 +88,16 @@ bind '"\C-h": backward-kill-word'
 [ -z "$TMUX" ] && exec tmux
 
 
+echo
 echo "Welcome to"
-figlet -f lean Alpine | boxes | lolcat -x
+figlet -f big Alpine | boxes -d unicornsay | lolcat -x -r -h 0.1 --seed 1107380085
 echo
 echo
-fortune
-echo 
+
+## Print out "fortune" with lolcat with horizontal frequency set to a miniscule number so it basically sends it in a single color.
+fortune -s | boxes -d ansi -p a1l3r3 | lolcat -x -h 0.00001
+
+
+echo
+echo "Today is: $(date --rfc-3339 date)" | boxes -p a1l3r3 -d boxquote
 echo
