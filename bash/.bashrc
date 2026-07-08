@@ -3,11 +3,19 @@
 # Korin's Amazing BASHRC        #
 #                               #
 # -------------------------------
+# (Copyleft Korin 1984)
 
+# ------------------------------- Configuration
+
+## Changes some small things based on if we're on a TTY device or not ^w^
+export BCONF_TTY=0
+export BCONF_IS_KORIN=0
 
 # ------------------------------- Aliases
 
 alias .='cd ..'
+alias ..='cd ../..'
+alias ...='cd ../../../'
 alias cp='cp -v'
 alias rm='rm -i'
 alias vi='vim'
@@ -34,7 +42,9 @@ alias sl='sl | lolcat -x'
 alias calc='bc -q'
 
 # PIPE COPY FOR... well you know. piping.
-alias pcopy='tmux load-buffer -'
+if [ "$BCONF_TTY" -eq 1 ]; then
+    alias pcopy='tmux load-buffer -'
+fi
 
 # ------------------------------- Exports
 
@@ -87,20 +97,41 @@ bind '"\C-h": backward-kill-word'
 
 # ------------------------------- Start
 
-## Autostart TMUX
-[ -z "$TMUX" ] && exec tmux
+## Autostart TMUX only if on laptop.
+if [ "$BCONF_TTY" -eq 1 ]; then
+    [ -z "$TMUX" ] && exec tmux
+fi
 
 
 echo
 echo "Welcome to"
-figlet -f big Alpine | boxes -d unicornsay | lolcat -x -r -h 0.1 --seed 1107380085
+if [ "$BCONF_TTY" -eq 1 ]; then
+    figlet -f big Alpine | boxes -d unicornsay | lolcat -x -r -h 0.1 --seed 1107380085
+else
+    figlet -f big Alpine | boxes -d unicornsay | lolcat -r -h 0.1 --seed 1107380085
+fi
 echo
 echo
 
 ## Print out "fortune" with lolcat with horizontal frequency set to a miniscule number so it basically sends it in a single color.
-fortune -s | boxes -d ansi -p a1l3r3 | lolcat -x -h 0.00001
+if [ "$BCONF_TTY" -eq 1 ]; then
+    fortune -s | boxes -d ansi -p a1l3r3 | lolcat -x -h 0.00001
+else
+    fortune -s | boxes -d ansi -p a1l3r3 | lolcat -h 0.00001
+fi
 
 
 echo
 echo "Today is: $(date --rfc-3339 date)" | boxes -p a1l3r3 -d boxquote
 echo
+
+if [ "$BCONF_IS_KORIN" -eq 0 ]; then
+    echo "*********************************************************************************************"
+    echo
+    echo "Looks like you're using '/home/korin/' in starship.toml ^w^"
+    echo "Nothing wrong with that!...."
+    echo "Just set the BCONF_IS_KORIN export in .bashrc to true"
+    echo "plus if you want, just like, modify the starship.toml to feature your pwd. Im too lazy fr"
+    echo
+    echo "*********************************************************************************************"
+fi
