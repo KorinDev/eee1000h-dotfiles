@@ -6,9 +6,6 @@ set number
 
 set termguicolors
 
-set ttyfast
-set lazyredraw
-
 "---------------------------------------- Tabs
 filetype plugin indent on
 set expandtab
